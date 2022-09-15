@@ -1,0 +1,61 @@
+var ndp;
+(function($)
+{
+	var activehash;
+
+	ndp = function()
+	{
+		var _this = this;
+
+		activehash = window.location.hash;
+		activehash = '';
+	
+		_this.pvListener($('div.surl[data-hash]:not([data-hash="false"])'));
+
+		if (activehash != '' && activehash != '#')
+		{
+			var hash = activehash.replace('#', '');
+			var offset = $('div.surl[data-hash="'+hash+'"]').offset().top;
+
+			$("html, body").scrollTop(offset);
+		}
+	};
+
+	ndp.prototype.pvListen = function(ele, hash)
+	{
+		var scrollTop = $(window).scrollTop();
+		var position = ele.position().top;
+		var height = ele.height();
+
+		if((scrollTop >= position) && (scrollTop < position+height))
+		{
+			var newhash = (typeof hash != 'undefined') ? hash : '_';
+			window.location.hash = newhash;
+			activehash = newhash;
+		}
+	};
+
+	ndp.prototype.pvListener = function(ele)
+	{
+		var _this = this;
+		
+		if(typeof ele === "string"){
+			ele = $(ele);
+		}
+
+		ele.each(function()
+		{
+			var ele = $(this);
+			var hash = ele.data('hash');
+			
+			if (typeof hash == 'undefined') { return true; }
+
+			$(window).scroll(function(){
+				_this.pvListen(ele, hash);
+			});
+		});
+	};
+
+})(jQuery);
+
+var ndpEmbed = new ndp();

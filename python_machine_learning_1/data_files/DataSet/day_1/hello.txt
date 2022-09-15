@@ -1,0 +1,1 @@
+Hello WorldThis is a basic Python for Data Science ClassWe first learn Basic SyntaxLater, we will learn visualizationHello WorldThis is a basic Python for Data Science ClassWe first learn Basic SyntaxLater, we will learn visualization
