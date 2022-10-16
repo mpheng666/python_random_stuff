@@ -1,0 +1,24 @@
+ann2.ipynb
+deep5.ipynb
+deep5_gpu.ipynb
+Exercise 3.ipynb
+housingp1_deep.ipynb
+knn1.ipynb
+lrg1.ipynb
+lrg2.ipynb
+p10_log_reg_class1.ipynb
+p11_hierrarchical_cluster1.ipynb
+p12_c_means_cluster1.ipynb
+p13_ann1p.ipynb
+p14_ann_func_est_best.ipynb
+p15_deep_func_est_best2.ipynb
+p1_review1.ipynb
+p2_numpy1.ipynb
+p3_Pandas1.ipynb
+p4_pandas2.ipynb
+p5_visual1_plot.ipynb
+p6_housing1.ipynb
+p7_read1.ipynb
+p8_MV_regression1.ipynb
+p9_decision_tree1.ipynb
+text_classification1.ipynb
